@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'inter-tight': ['var(--font-inter-tight)', 'sans-serif'],
+      },
     },
   },
   plugins: [],
