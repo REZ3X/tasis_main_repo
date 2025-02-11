@@ -1,6 +1,7 @@
 import {
   FaShieldAlt,
-  FaBalanceScale,
+  FaGavel,
+  FaUserShield,
   FaBullseye,
   FaHandshake,
 } from "react-icons/fa";
@@ -79,7 +80,7 @@ export default function MissionVision() {
               </p>
               <ul className="space-y-4 text-[#efbb4a]">
                 <li className="flex items-center gap-3">
-                  <FaBalanceScale className="w-5 h-5" />
+                  <FaGavel className="w-5 h-5" />
                   Penegakan Tata Tertib Sekolah
                 </li>
                 <li className="flex items-center gap-3">
@@ -87,7 +88,7 @@ export default function MissionVision() {
                   Tindakan Prefentive Pelanggaran Peraturan
                 </li>
                 <li className="flex items-center gap-3">
-                  <FaHandshake className="w-5 h-5" />
+                  <FaUserShield className="w-5 h-5" />
                   Perbantuan Keamanan
                 </li>
               </ul>
