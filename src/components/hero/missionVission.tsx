@@ -83,11 +83,11 @@ export default function MissionVision() {
                   Penegakan Tata Tertib Sekolah
                 </li>
                 <li className="flex items-center gap-3">
-                  <FaBalanceScale className="w-5 h-5" />
+                  <FaShieldAlt className="w-5 h-5" />
                   Tindakan Prefentive Pelanggaran Peraturan
                 </li>
                 <li className="flex items-center gap-3">
-                  <FaBalanceScale className="w-5 h-5" />
+                  <FaHandshake className="w-5 h-5" />
                   Perbantuan Keamanan
                 </li>
               </ul>
