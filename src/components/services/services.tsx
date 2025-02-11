@@ -1,8 +1,6 @@
 import {
   FaShieldAlt,
   FaUserShield,
-  FaClock,
-  FaClipboardCheck,
 } from "react-icons/fa";
 
 export default function Services() {
@@ -28,49 +26,49 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Service Cards */}
-          {[
+            {[
             {
-              icon: <FaShieldAlt size={40} />,
-              title: "Patroli Kampus",
+              icon: <FaShieldAlt size={40} />, // Keep shield for morning security
+              title: "Penjagaan Pagi",
               description:
-                "Pengawasan 24/7 untuk memastikan keamanan seluruh area kampus.",
+              "Penjagaan dan pengawasan di 4 titik masuk area sekolah setiap pagi.",
             },
             {
-              icon: <FaUserShield size={40} />,
-              title: "Kontrol Akses",
+              icon: <FaUserShield size={40} />, // Keep for security patrol
+              title: "Patroli Keamanan Sore",
               description:
-                "Pengaturan dan pemantauan akses ke area-area tertentu kampus.",
+              "Patroli rutin di area sekolah untuk memastikan keamanan siswa dan fasilitas sekolah.",
             },
             {
-              icon: <FaClock size={40} />,
-              title: "Respons Cepat",
+              icon: <FaShieldAlt size={40} />, // Changed to shield for ceremony duty
+              title: "Pendampingan Ketugasan Upacara",
               description:
-                "Penanganan cepat untuk setiap insiden keamanan yang terjadi.",
+              "Membantu dan mendampingi siswa dalam pelaksanaan upacara bendera.",
             },
             {
-              icon: <FaClipboardCheck size={40} />,
-              title: "Penegakan Aturan",
+              icon: <FaUserShield size={40} />, // Changed to user shield for security assistance
+              title: "Perbantuan Keamanan",
               description:
-                "Implementasi konsisten peraturan kampus untuk ketertiban.",
+              "Memberikan bantuan keamanan dan penegakan peraturan di area sekolah.",
             },
-          ].map((service, index) => (
+            ].map((service, index) => (
             <div
               key={index}
               className="group relative bg-gradient-to-br from-[#0d1216] to-[#231918] p-6 rounded-xl 
-                border border-[#594925]/20 hover:border-[#ebae3a]/50 transition-all duration-500
-                hover:shadow-lg hover:shadow-[#ebae3a]/10 hover:-translate-y-1"
+              border border-[#594925]/20 hover:border-[#ebae3a]/50 transition-all duration-500
+              hover:shadow-lg hover:shadow-[#ebae3a]/10 hover:-translate-y-1"
             >
               <div className="mb-4 text-[#ebae3a] group-hover:scale-110 transform transition-all duration-300 ease-out">
-                {service.icon}
+              {service.icon}
               </div>
               <h3 className="text-xl font-semibold text-[#ebae3a] mb-2 font-inter-tight group-hover:text-[#efbb4a] transition-colors duration-300">
-                {service.title}
+              {service.title}
               </h3>
               <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                {service.description}
+              {service.description}
               </p>
             </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>
