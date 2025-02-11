@@ -35,8 +35,8 @@ export default function DesktopNav() {
           <div className="flex items-center gap-8">
             {[
               { name: 'Beranda', href: '/' },
-              { name: 'Anggota', href: '/anggota' },
-              { name: 'Tentang Kami', href: '/tentang' },
+              { name: 'Anggota', href: '/comingSoon' },
+              { name: 'Tentang Kami', href: '/comingSoon' },
             ].map((link) => (
               <Link
                 key={link.name}
