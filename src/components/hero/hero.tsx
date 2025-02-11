@@ -77,7 +77,7 @@ export default function Hero() {
           </button>
           
           <Link 
-            href="/anggota"
+            href="/comingSoon"
             className="px-8 py-4 bg-[#231918] text-[#ebae3a] font-inter-tight font-bold 
             rounded-md hover:bg-[#1f1c16] border border-[#ebae3a]/20 hover:border-[#ebae3a]
             transition-all duration-300"
@@ -86,7 +86,7 @@ export default function Hero() {
           </Link>
 
           <Link 
-            href="/tentang"
+            href="/comingSoon"
             className="px-8 py-4 bg-[#231918] text-[#ebae3a] font-inter-tight font-bold 
             rounded-md hover:bg-[#1f1c16] border border-[#ebae3a]/20 hover:border-[#ebae3a]
             transition-all duration-300"
