@@ -15,6 +15,13 @@ export default {
       fontFamily: {
         'inter-tight': ['var(--font-inter-tight)', 'sans-serif'],
       },
+      screens: {
+        'mobile': {'max': '639px'},
+        'tablet': {'max': '1023px'},
+        'laptop': {'min': '1279px'},
+        'desktop': {'max': '1535px'},
+        'ultra': {'max': '1920px'},
+      },
     },
   },
   plugins: [],
