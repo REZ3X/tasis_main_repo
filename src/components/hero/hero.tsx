@@ -61,11 +61,11 @@ export default function Hero() {
         </h2>
 
         <p className="font-inter-tight text-lg text-white max-w-2xl leading-relaxed">
-          Kami berdedikasi untuk menciptakan lingkungan belajar yang aman dan
-          terjamin melalui layanan keamanan profesional dan penegakan peraturan
-          yang efektif. Tim kami menggabungkan integritas, kewaspadaan, dan
-          keahlian untuk melindungi hal yang paling penting – komunitas
-          pendidikan kami.
+          Tim Tata Tertib Siswa (TASIS) dari dan untuk Stembayo, hadir sebagai
+          garda terdepan penegakan peraturan sekolah. Kami berdedikasi untuk
+          menciptakan lingkungan belajar yang tertib dan teratur melalui layanan
+          penegakan profesional yang efektif. TASIS menggabungkan integritas,
+          kewaspadaan, dan keahlian untuk menegakan tata tertib sekolah.
         </p>
 
         <div className="flex flex-wrap gap-4 mt-8">
@@ -75,8 +75,8 @@ export default function Hero() {
           >
             Visi dan Misi Kami
           </button>
-          
-          <Link 
+
+          <Link
             href="/comingSoon"
             className="px-8 py-4 bg-[#231918] text-[#ebae3a] font-inter-tight font-bold 
             rounded-md hover:bg-[#1f1c16] border border-[#ebae3a]/20 hover:border-[#ebae3a]
@@ -85,7 +85,7 @@ export default function Hero() {
             Anggota
           </Link>
 
-          <Link 
+          <Link
             href="/comingSoon"
             className="px-8 py-4 bg-[#231918] text-[#ebae3a] font-inter-tight font-bold 
             rounded-md hover:bg-[#1f1c16] border border-[#ebae3a]/20 hover:border-[#ebae3a]
