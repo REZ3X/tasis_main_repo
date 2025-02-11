@@ -51,23 +51,23 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-[#ebae3a] font-inter-tight">
-              Tautan Cepat
-            </h3>
-            <ul className="space-y-2">
-              {['Beranda', 'Tentang Kami', 'Layanan', 'Kontak'].map((item) => (
-                <li key={item}>
-                  <Link 
-                    href="#" 
-                    className="text-gray-300 hover:text-[#ebae3a] transition-colors duration-300"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="space-y-4 relative"> {/* Added relative */}
+              <h3 className="text-lg font-semibold text-[#ebae3a] font-inter-tight">
+                Tautan Cepat
+              </h3>
+              <ul className="space-y-2">
+                {['Beranda', 'Tentang Kami', 'Layanan', 'Kontak'].map((item) => (
+                  <li key={item} className="relative"> {/* Added relative */}
+                    <Link 
+                      href="#" 
+                      className="text-gray-300 hover:text-[#ebae3a] transition-colors duration-300 block"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
@@ -91,29 +91,29 @@ export default function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-[#ebae3a] font-inter-tight">
-              Ikuti Kami
-            </h3>
-            <div className="flex gap-4">
-              {[
-                { icon: <FaFacebookF />, href: '#' },
-                { icon: <FaTwitter />, href: '#' },
-                { icon: <FaInstagram />, href: '#' },
-                { icon: <FaLinkedinIn />, href: '#' },
-              ].map((social, index) => (
-                <Link
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 rounded-full bg-[#1f1c16] flex items-center justify-center
-                    text-[#ebae3a] hover:bg-[#ebae3a] hover:text-[#0d1216] transition-all duration-300
-                    border border-[#ebae3a]/20 hover:border-[#ebae3a]"
-                >
-                  {social.icon}
-                </Link>
-              ))}
+          <div className="space-y-4 relative"> {/* Added relative */}
+              <h3 className="text-lg font-semibold text-[#ebae3a] font-inter-tight">
+                Ikuti Kami
+              </h3>
+              <div className="flex gap-4">
+                {[
+                  { icon: <FaFacebookF />, href: '#' },
+                  { icon: <FaTwitter />, href: '#' },
+                  { icon: <FaInstagram />, href: '#' },
+                  { icon: <FaLinkedinIn />, href: '#' },
+                ].map((social, index) => (
+                  <Link
+                    key={index}
+                    href={social.href}
+                    className="relative w-10 h-10 rounded-full bg-[#1f1c16] flex items-center justify-center
+                      text-[#ebae3a] hover:bg-[#ebae3a] hover:text-[#0d1216] transition-all duration-300
+                      border border-[#ebae3a]/20 hover:border-[#ebae3a] z-10"
+                  >
+                    {social.icon}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
         </div>
       </div>
 
