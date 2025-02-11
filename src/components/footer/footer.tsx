@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { FaShieldAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, 
-         FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import Image from 'next/image';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, 
+         FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -42,11 +43,19 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <FaShieldAlt className="text-[#ebae3a] text-2xl" />
-              <h3 className="text-xl font-bold font-inter-tight text-[#ebae3a]">TaSis</h3>
+              <Image 
+              src="/images/logo.svg" 
+              alt="TaSis Logo" 
+              width={32}
+              height={32}
+              className="object-contain"
+              />
+              <h3 className="text-xl font-bold font-inter-tight text-[#ebae3a]">TASIS</h3>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Memberikan layanan keamanan dan penegakan peraturan profesional untuk lingkungan pendidikan yang lebih baik.
+              Tim Tata Tertib Siswa SMKN 2 Depok adalah tim yang bertugas untuk
+              memberikan layanan keamanan dan penegakan peraturan yang profesional
+              di lingkungan sekolah.
             </p>
           </div>
 
@@ -55,15 +64,20 @@ export default function Footer() {
               <h3 className="text-lg font-semibold text-[#ebae3a] font-inter-tight">
                 Tautan Cepat
               </h3>
-              <ul className="space-y-2">
-                {['Beranda', 'Tentang Kami', 'Layanan', 'Kontak'].map((item) => (
-                  <li key={item} className="relative"> {/* Added relative */}
-                    <Link 
-                      href="#" 
-                      className="text-gray-300 hover:text-[#ebae3a] transition-colors duration-300 block"
-                    >
-                      {item}
-                    </Link>
+                <ul className="space-y-2">
+                {[
+                  { name: 'Beranda', href: '/' },
+                  { name: 'Anggota', href: '/anggota' },
+                  { name: 'Tentang Kami', href: '/tentang' },
+                  { name: 'Developer', href: 'https://rejaka.me' }
+                ].map((item) => (
+                  <li key={item.name} className="relative">
+                  <Link 
+                    href={item.href} 
+                    className="text-gray-300 hover:text-[#ebae3a] transition-colors duration-300 block"
+                  >
+                    {item.name}
+                  </Link>
                   </li>
                 ))}
               </ul>
@@ -77,15 +91,15 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-gray-300">
                 <FaPhone className="text-[#ebae3a]" />
-                <span>+62 123 4567 890</span>
+                <span>-</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <FaEnvelope className="text-[#ebae3a]" />
-                <span>info@tasis.com</span>
+                <span>-</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <FaMapMarkerAlt className="text-[#ebae3a]" />
-                <span>Jl. Contoh No. 123, Kota, Indonesia</span>
+                <span>Mrican, Caturtunggal, Depok, Sleman, Yogyakarta 55281</span>
               </li>
             </ul>
           </div>
@@ -97,10 +111,7 @@ export default function Footer() {
               </h3>
               <div className="flex gap-4">
                 {[
-                  { icon: <FaFacebookF />, href: '#' },
-                  { icon: <FaTwitter />, href: '#' },
                   { icon: <FaInstagram />, href: '#' },
-                  { icon: <FaLinkedinIn />, href: '#' },
                 ].map((social, index) => (
                   <Link
                     key={index}

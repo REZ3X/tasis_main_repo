@@ -22,8 +22,9 @@ export default function Skills() {
             Kemampuan Tim
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Tim kami dilatih dengan standar profesional tertinggi untuk
-            memberikan layanan keamanan terbaik.
+            Tim kami memiliki kemampuan yang unggul dalam berbagai aspek yang
+            diperlukan untuk memberikan layanan keamanan dan penegakan peraturan
+            yang profesional.
           </p>
         </div>
 
@@ -45,7 +46,7 @@ export default function Skills() {
               skills: [
                 "Pengawasan Aktif",
                 "Kontrol Akses",
-                "Manajemen Krisis",
+                "Penyelidikan",
                 "Pencegahan Insiden",
               ],
             },
@@ -56,7 +57,7 @@ export default function Skills() {
                 "Pengetahuan Regulasi",
                 "Keadilan",
                 "Konsistensi",
-                "Dokumentasi",
+                "Penertiban",
               ],
             },
             {
@@ -64,7 +65,7 @@ export default function Skills() {
               title: "Kesiapsiagaan",
               skills: [
                 "Respons Cepat",
-                "Kebugaran Fisik",
+                "Antisipasi",
                 "Patroli Efektif",
                 "Kewaspadaan",
               ],
@@ -76,14 +77,14 @@ export default function Skills() {
                 "Komunikasi Efektif",
                 "Penanganan Konflik",
                 "Koordinasi Tim",
-                "Pelaporan",
+                "Pencarian Informasi",
               ],
             },
             {
               icon: <FaBullseye size={30} />,
               title: "Pengembangan",
               skills: [
-                "Pelatihan Berkala",
+                "Digitalisasi",
                 "Evaluasi Kinerja",
                 "Adaptasi",
                 "Pembaruan Prosedur",

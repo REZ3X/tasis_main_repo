@@ -61,11 +61,8 @@ export default function Hero() {
         </h2>
 
         <p className="font-inter-tight text-lg text-white max-w-2xl leading-relaxed">
-          Tim Tata Tertib Siswa (TASIS) dari dan untuk Stembayo, hadir sebagai
-          garda terdepan penegakan peraturan sekolah. Kami berdedikasi untuk
-          menciptakan lingkungan belajar yang tertib dan teratur melalui layanan
-          penegakan profesional yang efektif. TASIS menggabungkan integritas,
-          kewaspadaan, dan keahlian untuk menegakan tata tertib sekolah.
+          Tim Tata Tertib Siswa (TASIS) SMKN 2 Depok Sleman. Kami berkomitmen menciptakan lingkungan belajar yang tertib
+          dan teratur.
         </p>
 
         <div className="flex flex-wrap gap-4 mt-8">
