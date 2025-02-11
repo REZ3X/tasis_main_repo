@@ -5,6 +5,7 @@ import Services from '@/components/services/services';
 import Skills from '@/components/services/skills';
 import MailForm from '@/components/contact/mailForm';
 import Footer from '@/components/footer/footer';
+import ButtonToUp from '@/components/feature/buttonToUp';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Skills />
         <MailForm />
         <Footer />
+        <ButtonToUp />
       </main>
     </>
   );
