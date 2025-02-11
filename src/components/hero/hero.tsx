@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative mt-[-70px] flex flex-col lg:flex-row items-center justify-between px-6 py-12 lg:py-20 bg-[#0d1216] min-h-[calc(100vh-80px)] overflow-hidden">
+    <section className="relative mt-[-70px] mobile:mt-[30px] flex flex-col lg:flex-row items-center justify-between px-6 py-12 lg:py-20 bg-[#0d1216] min-h-[calc(100vh-80px)] overflow-hidden">
       {/* Wave Background */}
       <div className="absolute inset-0 z-0">
         <svg
@@ -93,7 +93,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="flex-1 mt-12 lg:mt-0 relative h-[200px] lg:h-[350px] w-full z-10">
+      <div className="flex-1 mobile:hidden mt-12 lg:mt-0 relative h-[200px] lg:h-[350px] w-full z-10">
         <div className="absolute inset-0 bg-gradient-to-t from-[#0d1216]/80 via-transparent to-[#0d1216]/80 z-10"></div>
         <Image
           src="/images/tss.JPG"
