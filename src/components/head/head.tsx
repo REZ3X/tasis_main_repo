@@ -4,7 +4,7 @@ const interTight = Inter_Tight({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter-tight',
-  weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], // Changed from weights to weight
 });
 
 export { interTight };
