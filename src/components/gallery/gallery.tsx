@@ -15,22 +15,22 @@ export default function Gallery() {
       className: "col-span-2 row-span-2"
     },
     {
-      src: "/images/tasishutri.jpg",
+      src: "/images/tasishutri.JPG",
       alt: "Setelah Upacara Pengibaran Bendera",
       className: "col-span-1 row-span-2"
     },
     {
-      src: "/images/tss.jpg",
+      src: "/images/tss.JPG",
       alt: "Setelah Upcara Penurunan Bendera",
       className: "col-span-1 row-span-1"
     },
     {
-      src: "/images/upcr.jpg",
+      src: "/images/upcr.JPG",
       alt: "Petugas Presensi Upcara TASIS",
       className: "col-span-2 row-span-1"
     },
     {
-      src: "/images/upcr2.jpg",
+      src: "/images/upcr2.JPG",
       alt: "Petugas Presensi Upacara TASIS",
       className: "col-span-1 row-span-1"
     }
