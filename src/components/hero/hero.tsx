@@ -66,12 +66,13 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-wrap gap-4 mt-8">
-          <button
+            <Link
+            href="#vsms"
             className="px-8 py-4 bg-[#ebae3a] text-[#231918] font-inter-tight font-bold 
             rounded-md hover:bg-[#efbb4a] transition-colors duration-300"
-          >
+            >
             Visi dan Misi Kami
-          </button>
+            </Link>
 
           <Link
             href="/comingSoon"

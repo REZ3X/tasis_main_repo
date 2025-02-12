@@ -17,6 +17,7 @@ export default function Home() {
       <MobileNav />
       <main className="min-h-screen bg-[#0d1216] pt-20"> {/* Added pt-20 for navbar spacing */}
         <Hero />
+        <div id="msvs"></div>
         <MissionVision />
         <Services />
         <Skills />

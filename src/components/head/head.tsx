@@ -19,8 +19,8 @@ export default function Head() {
         crossOrigin="anonymous"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="TaSis - Task System Management" />
-      <title>TaSis</title>
+      <meta name="description" content="TASIS - Tim Tata Tertib Siswa Stembayo" />
+      <title>TASIS | Tata Tertib Siswa</title>
     </>
   );
 }

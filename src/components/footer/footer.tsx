@@ -67,8 +67,8 @@ export default function Footer() {
                 <ul className="space-y-2">
                 {[
                   { name: 'Beranda', href: '/' },
-                  { name: 'Anggota', href: '/anggota' },
-                  { name: 'Tentang Kami', href: '/tentang' },
+                  { name: 'Anggota', href: '/member' },
+                  { name: 'Tentang Kami', href: '/comingSoon' },
                   { name: 'Developer', href: 'https://rejaka.me' }
                 ].map((item) => (
                   <li key={item.name} className="relative">
