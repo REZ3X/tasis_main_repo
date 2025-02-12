@@ -21,7 +21,7 @@ export default function Head() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="TASIS - Tim Tata Tertib Siswa Stembayo" />
       <title>TASIS | Tata Tertib Siswa</title>
-      <link rel="icon" href="/imageslogo.svg" />
+      <link rel="icon" href="/images/logo.svg" />
     </>
   );
 }
