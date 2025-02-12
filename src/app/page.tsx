@@ -7,6 +7,8 @@ import MailForm from '@/components/contact/mailForm';
 import Footer from '@/components/footer/footer';
 import ButtonToUp from '@/components/feature/buttonToUp';
 import MobileNav from '@/components/nav/mobileNav';
+import Gallery from '@/components/gallery/gallery';
+import Activity from '@/components/activity/activity';
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
         <MissionVision />
         <Services />
         <Skills />
+        <Activity />
+        <Gallery />
         <MailForm />
         <Footer />
         <ButtonToUp />
