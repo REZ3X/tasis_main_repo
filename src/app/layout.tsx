@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TaSis",
-  description: "Task System Management",
+  title: "TASIS",
+  description: "Tata Tertib Siswa",
 };
 
 export default function RootLayout({
