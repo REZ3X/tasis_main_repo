@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,21 +12,24 @@ export default function MobileNav() {
   // Close menu when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (sideNavRef.current && !sideNavRef.current.contains(event.target as Node)) {
+      if (
+        sideNavRef.current &&
+        !sideNavRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
   }, [isOpen]);
 
@@ -36,7 +39,7 @@ export default function MobileNav() {
       <nav className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[#0d1216] border-b border-[#594925]/20">
         <div className="px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo and Name */}
+            {/* Logo and Name - Updated with description */}
             <Link href="/" className="flex items-center gap-2">
               <div className="relative w-8 h-8">
                 <Image
@@ -47,9 +50,14 @@ export default function MobileNav() {
                   priority
                 />
               </div>
-              <span className="text-lg font-bold text-[#ebae3a] font-inter-tight">
-                TASIS
-              </span>
+              <div className="flex flex-col">
+                <span className="text-lg font-bold text-[#ebae3a] font-inter-tight">
+                  TASIS
+                </span>
+                <span className="text-xs text-[#594925]">
+                  Tata Tertib Siswa
+                </span>
+              </div>
             </Link>
 
             {/* Menu Button */}
@@ -65,9 +73,9 @@ export default function MobileNav() {
       </nav>
 
       {/* Side Navigation */}
-      <div 
+      <div
         className={`lg:hidden fixed inset-0 bg-black transition-opacity duration-300 ease-in-out ${
-          isOpen ? 'opacity-50 visible' : 'opacity-0 invisible'
+          isOpen ? "opacity-50 visible" : "opacity-0 invisible"
         } z-40`}
         onClick={() => setIsOpen(false)}
       />
@@ -78,7 +86,7 @@ export default function MobileNav() {
         className={`lg:hidden fixed top-0 right-0 w-64 h-full bg-[#0d1216] 
           transform transition-transform duration-300 ease-in-out 
           border-l border-[#594925]/20 z-50
-          ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         {/* Close Button */}
         <button
@@ -94,9 +102,9 @@ export default function MobileNav() {
         <div className="pt-16 px-6">
           <nav className="space-y-4">
             {[
-              { name: 'Beranda', href: '/' },
-              { name: 'Anggota', href: '/comingSoon' },
-              { name: 'Tentang Kami', href: '/comingSoon' },
+              { name: "Beranda", href: "/" },
+              { name: "Anggota", href: "/member" },
+              { name: "Tentang Kami", href: "/comingSoon" },
             ].map((link) => (
               <Link
                 key={link.name}
