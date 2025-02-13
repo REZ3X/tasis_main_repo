@@ -6,6 +6,7 @@ import TheLegals from "@/components/member/theLegals";
 import TheAccountant from "@/components/member/theAccountant";
 import AllMember from "@/components/member/allMember";
 import Footer from "@/components/footer/footer";
+import ButtonToUp from "@/components/feature/buttonToUp";
 
 export default function MemberPage() {
   return (
@@ -68,6 +69,7 @@ export default function MemberPage() {
         <AllMember />
       </main>
       <Footer /> 
+      <ButtonToUp />
     </>
   );
 }
