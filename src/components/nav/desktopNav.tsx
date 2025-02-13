@@ -25,7 +25,7 @@ export default function DesktopNav() {
                 TASIS
               </span>
               <span className="text-xs text-[#594925]">
-                Tata Tertib Siswa
+                Tata Tertib Siswa (2024/2025)
               </span>
             </div>
           </Link>
@@ -36,9 +36,10 @@ export default function DesktopNav() {
             {[
               { name: 'Beranda', href: '/' },
               { name: 'Anggota', href: '/member' },
-              { name: "Acara", href: "/comingSoon"},
+              { name: "Acara", href: "/events"},
               { name: 'Pengaduan', href: '/comingSoon' },
               { name: 'Tentang Kami', href: '/comingSoon' },
+              { name: "Tata Tertib", href: "/comingSoon"},
             ].map((link) => (
               <Link
                 key={link.name}
