@@ -38,7 +38,7 @@ export default function Activity() {
   ];
 
   return (
-    <section className="relative px-6 py-20 bg-[#1f1c16] overflow-hidden">
+    <section className="relative px-6 py-8 bg-[#1f1c16] overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#ebae3a]/5 rounded-full blur-3xl"></div>
