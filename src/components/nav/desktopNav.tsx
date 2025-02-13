@@ -36,6 +36,7 @@ export default function DesktopNav() {
             {[
               { name: 'Beranda', href: '/' },
               { name: 'Anggota', href: '/member' },
+              { name: 'Pengaduan', href: '/comingSoon' },
               { name: 'Tentang Kami', href: '/comingSoon' },
             ].map((link) => (
               <Link

@@ -12,7 +12,7 @@ export default function MemberPage() {
     <>
       <DesktopNav />
       <MobileNav />
-      <main className="min-h-screen bg-[#0d1216] overflow-x-hidden">
+      <main className="min-h-screen mobile:mt-8 bg-[#0d1216] overflow-x-hidden">
         {/* Hero Section with Title */}
         <section className="relative px-6 py-20 bg-[#0d1216]">
           {/* Background Elements */}
