@@ -8,17 +8,19 @@ import AllMember from "@/components/member/allMember";
 import Footer from "@/components/footer/footer";
 import ButtonToUp from "@/components/feature/buttonToUp";
 
+/**
+ * MemberPage Component
+ * @description Renders the main member page of TASIS organization
+ * @returns JSX.Element representing the complete member page layout
+ */
 export default function MemberPage() {
   return (
     <>
       <DesktopNav />
       <MobileNav />
       <main className="min-h-screen mobile:mt-8 bg-[#0d1216] overflow-x-hidden">
-        {/* Hero Section with Title */}
         <section className="relative px-6 py-20 bg-[#0d1216]">
-          {/* Background Elements */}
           <div className="absolute inset-0 z-0">
-            {/* Decorative wave pattern */}
             <div className="absolute inset-0 opacity-10">
               <svg
                 className="w-full h-full"
@@ -39,7 +41,6 @@ export default function MemberPage() {
               </svg>
             </div>
 
-            {/* Existing blur effects */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#ebae3a]/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#594925]/5 rounded-full blur-3xl"></div>
           </div>
@@ -61,7 +62,6 @@ export default function MemberPage() {
           </div>
         </section>
 
-        {/* Upper Component */}
         <Upper />
         <TheLeads />
         <TheLegals />

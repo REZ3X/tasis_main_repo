@@ -1,5 +1,11 @@
 import { FaClock, FaCheckCircle } from 'react-icons/fa';
 
+/**
+ * Activity Component
+ * Displays a section showing past and future activities in a two-column layout
+ * Features a stylized background with gradient effects and interactive cards
+ * @returns JSX.Element - A section containing activity cards
+ */
 export default function Activity() {
   const pastActivities = [
     {
@@ -39,7 +45,6 @@ export default function Activity() {
 
   return (
     <section className="relative px-6 py-8 bg-[#1f1c16] overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#ebae3a]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#594925]/5 rounded-full blur-3xl"></div>
@@ -56,7 +61,6 @@ export default function Activity() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Past Activities */}
           <div className="space-y-6">
             <div className="flex items-center gap-3 mb-8">
               <FaCheckCircle className="text-[#ebae3a] w-6 h-6" />
@@ -80,7 +84,6 @@ export default function Activity() {
             ))}
           </div>
 
-          {/* Future Activities */}
           <div className="space-y-6">
             <div className="flex items-center gap-3 mb-8">
               <FaClock className="text-[#ebae3a] w-6 h-6" />

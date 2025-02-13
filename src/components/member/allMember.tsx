@@ -1,6 +1,13 @@
 import Image from 'next/image';
 
+/**
+ * AllMember Component
+ * Displays a grid of team members with their photos and names
+ * Uses responsive grid layout and hover effects
+ * @returns JSX.Element
+ */
 export default function AllMember() {
+  /** Array of team members with their names and profile images */
   const members = [
     { name: "Abel Deandra M.P", image: "/images/male.png" },
     { name: "Alfina Aura K.", image: "/images/female.png" },
@@ -34,7 +41,6 @@ export default function AllMember() {
 
   return (
     <section className="relative px-6 py-20 bg-[#0d1216] overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#ebae3a]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#594925]/5 rounded-full blur-3xl"></div>
@@ -50,7 +56,6 @@ export default function AllMember() {
           </p>
         </div>
 
-        {/* Updated grid container with better mobile layout */}
         <div className="flex justify-center">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6 max-w-[320px] sm:max-w-none">
             {members.map((member, index) => (

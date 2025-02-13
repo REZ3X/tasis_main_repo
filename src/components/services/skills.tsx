@@ -7,10 +7,22 @@ import {
   FaRunning,
 } from "react-icons/fa";
 
+/**
+ * Skills component displays a grid of team capabilities and professional skills
+ * organized in different categories. Each category includes an icon, title, and
+ * list of specific skills.
+ * 
+ * The component features:
+ * - Responsive grid layout (1 column mobile, 2 columns tablet, 3 columns desktop)
+ * - Interactive hover effects
+ * - Decorative background elements
+ * - Custom styling with gradient backgrounds and transitions
+ * 
+ * @returns {JSX.Element} A section containing the team's skills and capabilities
+ */
 export default function Skills() {
   return (
     <section className="relative px-6 py-20 bg-[#1f1c16] overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#ebae3a]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#594925]/5 rounded-full blur-3xl"></div>

@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * Hero Component
+ * @description Main landing section component featuring wave animation background,
+ * promotional content, and navigation links.
+ * @returns JSX.Element - A section containing hero content and animated background
+ */
 export default function Hero() {
   return (
     <section className="relative mt-[-70px] mobile:mt-[30px] flex flex-col lg:flex-row items-center justify-between px-6 py-12 lg:py-20 bg-[#0d1216] min-h-[calc(100vh-80px)] overflow-hidden">
-      {/* Wave Background */}
       <div className="absolute inset-0 z-0">
         <svg
           className="absolute w-full h-full opacity-25"
@@ -12,7 +17,6 @@ export default function Hero() {
           viewBox="0 0 1440 800"
           preserveAspectRatio="none"
         >
-          {/* First set of waves with more pronounced curves */}
           {Array.from({ length: 45 }).map((_, index) => (
             <path
               key={index}
@@ -29,7 +33,6 @@ export default function Hero() {
               strokeOpacity={0.5}
             />
           ))}
-          {/* Second set of waves with different curve pattern */}
           {Array.from({ length: 45 }).map((_, index) => (
             <path
               key={`second-${index}`}
@@ -49,7 +52,6 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Content */}
       <div className="flex-1 space-y-6 lg:pr-12 relative z-10">
         <h1 className="font-inter-tight text-5xl lg:text-6xl font-black text-[#ebae3a] leading-tight">
           Garda Terdepan <br />

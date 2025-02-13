@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+/**
+ * TheAccountant Component
+ * Displays a section showcasing the financial team members (accountants) of TASIS
+ * Features a responsive layout with background gradients and hover effects
+ */
 export default function TheAccountant() {
   const accountants = [
     {
@@ -18,7 +23,6 @@ export default function TheAccountant() {
 
   return (
     <section className="relative px-6 py-20 bg-[#0d1216] overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#ebae3a]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#594925]/5 rounded-full blur-3xl"></div>

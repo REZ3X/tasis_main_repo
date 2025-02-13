@@ -7,10 +7,15 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
+/**
+ * Footer component for the TaSis website
+ * Contains company info, quick links, contact information, and social media links
+ * Features a decorative background pattern and responsive grid layout
+ * @returns Footer component with multiple sections and bottom copyright bar
+ */
 export default function Footer() {
   return (
     <footer className="relative bg-[#0d1216] text-white">
-      {/* Background Pattern */}
       <div className="absolute inset-0 z-0">
         <svg
           className="absolute w-full h-full opacity-20"
@@ -18,7 +23,6 @@ export default function Footer() {
           viewBox="0 0 1440 800"
           preserveAspectRatio="none"
         >
-          {/* Diagonal lines pattern */}
           {Array.from({ length: 50 }).map((_, index) => (
             <path
               key={index}
@@ -29,7 +33,6 @@ export default function Footer() {
               fill="none"
             />
           ))}
-          {/* Second set of lines with different angle */}
           {Array.from({ length: 50 }).map((_, index) => (
             <path
               key={`second-${index}`}
@@ -44,7 +47,6 @@ export default function Footer() {
       </div>
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Image
@@ -65,10 +67,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div className="space-y-4 relative">
-            {" "}
-            {/* Added relative */}
             <h3 className="text-lg font-semibold text-[#ebae3a] font-inter-tight">
               Tautan Cepat
             </h3>
@@ -91,7 +90,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div className="space-y-4 relative">
             <h3 className="text-lg font-semibold text-[#ebae3a] font-inter-tight">
               Hubungi Kami
@@ -131,10 +129,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Links */}
           <div className="space-y-4 relative">
-            {" "}
-            {/* Added relative */}
             <h3 className="text-lg font-semibold text-[#ebae3a] font-inter-tight">
               Ikuti Kami
             </h3>
@@ -155,7 +150,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Footer */}
       <div className="border-t border-[#1f1c16]">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">

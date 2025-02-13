@@ -1,14 +1,24 @@
 import { Inter_Tight } from "next/font/google";
 
+/**
+ * Font configuration for Inter Tight
+ * Loads the Inter Tight font with multiple weights
+ * for use throughout the application
+ */
 const interTight = Inter_Tight({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter-tight",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // Changed from weights to weight
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export { interTight };
 
+/**
+ * Head component that sets up document metadata and resources
+ * Includes font preconnect, favicon, viewport settings, and meta descriptions
+ * @returns JSX element containing head configurations
+ */
 export default function Head() {
   return (
     <>

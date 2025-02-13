@@ -5,11 +5,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+/**
+ * MobileNav Component
+ * Renders a responsive mobile navigation menu with slide-out functionality.
+ * Features:
+ * - Responsive mobile-first design (hidden on desktop)
+ * - Slide-out side navigation
+ * - Click outside to close
+ * - Body scroll lock when menu is open
+ * - Animated transitions
+ */
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const sideNavRef = useRef<HTMLDivElement>(null);
 
-  // Close menu when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -24,7 +33,6 @@ export default function MobileNav() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -35,11 +43,9 @@ export default function MobileNav() {
 
   return (
     <>
-      {/* Mobile Navigation - Hidden on desktop */}
       <nav className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[#0d1216] border-b border-[#594925]/20">
         <div className="px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo and Name - Updated with description */}
             <Link href="/" className="flex items-center gap-2">
               <div className="relative w-8 h-8">
                 <Image
@@ -60,7 +66,6 @@ export default function MobileNav() {
               </div>
             </Link>
 
-            {/* Menu Button */}
             <button
               onClick={() => setIsOpen(true)}
               className="text-[#ebae3a] p-2 hover:text-[#efbb4a] transition-colors"
@@ -72,7 +77,6 @@ export default function MobileNav() {
         </div>
       </nav>
 
-      {/* Side Navigation */}
       <div
         className={`lg:hidden fixed inset-0 bg-black transition-opacity duration-300 ease-in-out ${
           isOpen ? "opacity-50 visible" : "opacity-0 invisible"
@@ -80,7 +84,6 @@ export default function MobileNav() {
         onClick={() => setIsOpen(false)}
       />
 
-      {/* Side Navigation - Always present but transformed */}
       <div
         ref={sideNavRef}
         className={`lg:hidden fixed top-0 right-0 w-64 h-full bg-[#0d1216] 
@@ -88,7 +91,6 @@ export default function MobileNav() {
           border-l border-[#594925]/20 z-50
           ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        {/* Close Button */}
         <button
           onClick={() => setIsOpen(false)}
           className="absolute top-4 right-4 text-[#ebae3a] p-2 
@@ -98,7 +100,6 @@ export default function MobileNav() {
           <FaTimes size={24} />
         </button>
 
-        {/* Navigation Links */}
         <div className="pt-16 px-6">
           <nav className="space-y-4">
             {[

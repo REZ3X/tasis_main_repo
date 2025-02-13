@@ -4,6 +4,12 @@ import { useState } from 'react';
 import { FaEnvelope, FaUser, FaPhone, FaPaperPlane } from 'react-icons/fa';
 import Link from 'next/link';
 
+/**
+ * MailForm Component
+ * Renders a contact form with fields for name, email, phone, and message
+ * Includes a link to report violations
+ * @returns JSX.Element - A form section with contact fields and submission button
+ */
 export default function MailForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,12 +18,19 @@ export default function MailForm() {
     message: '',
   });
 
+  /**
+   * Handles form submission
+   * @param e - Form submission event
+   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your form submission logic here
     console.log(formData);
   };
 
+  /**
+   * Handles input field changes
+   * @param e - Input change event
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -60,7 +73,6 @@ export default function MailForm() {
             />
           </div>
 
-          {/* Update other input icons and placeholders with the same pattern */}
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <FaEnvelope className="text-[#ebae3a]/70" />

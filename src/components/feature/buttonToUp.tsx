@@ -3,10 +3,15 @@
 import { useEffect, useState } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
+/**
+ * ButtonToUp Component
+ * Renders a floating button that appears when scrolling down the page.
+ * When clicked, smoothly scrolls the page back to the top.
+ * Button appears after scrolling 300px from the top.
+ */
 export default function ButtonToUp() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled up to given distance
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
       setIsVisible(true);
@@ -15,8 +20,6 @@ export default function ButtonToUp() {
     }
   };
 
-  // Set the top scroll coordinate to 0
-  // Behavior set to 'smooth' for smooth scrolling
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

@@ -6,14 +6,21 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 
+/**
+ * MissionVision Component
+ * Displays the organization's mission and vision statements in a two-column layout
+ * Features:
+ * - Responsive grid layout (1 column on mobile, 2 columns on desktop)
+ * - Visual elements including icons and decorative backgrounds
+ * - Themed sections for Vision and Mission with distinct styling
+ * @returns JSX.Element
+ */
 export default function MissionVision() {
   return (
     <section className="px-6 py-20 bg-[#0d1216]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Vision Section */}
           <div className="relative overflow-hidden p-8 bg-[#231918] rounded-2xl border-2 border-[#594925]/30 shadow-lg shadow-[#594925]/10">
-            {/* Background Icon */}
             <div className="absolute -right-20 -bottom-20 opacity-15">
               <FaBullseye className="w-64 h-64 text-[#ebae3a]" />
             </div>
@@ -59,9 +66,7 @@ export default function MissionVision() {
             </div>
           </div>
 
-          {/* Mission Section - Now Second */}
           <div className="relative overflow-hidden p-8 bg-[#1f1c16] rounded-2xl border-2 border-[#ebae3a]/20 shadow-lg shadow-[#ebae3a]/5">
-            {/* Background Icon */}
             <div className="absolute -right-20 -bottom-20 opacity-15">
               <FaShieldAlt className="w-64 h-64 text-[#ebae3a]" />
             </div>

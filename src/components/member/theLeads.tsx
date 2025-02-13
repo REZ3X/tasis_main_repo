@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+/**
+ * TheLeads Component
+ * Displays the leadership section of TASIS with their images and roles
+ * Contains a background with gradient effects and displays three leaders in a responsive layout
+ */
 export default function TheLeads() {
   const leaders = [
     {
@@ -24,7 +29,6 @@ export default function TheLeads() {
 
   return (
     <section className="relative px-6 py-20 bg-[#0d1216] overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#ebae3a]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#594925]/5 rounded-full blur-3xl"></div>

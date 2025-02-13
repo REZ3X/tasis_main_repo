@@ -11,12 +11,18 @@ import Gallery from '@/components/gallery/gallery';
 import Activity from '@/components/activity/activity';
 import Link from 'next/link';
 
+/**
+ * Home component serves as the main landing page of the application.
+ * Includes navigation, hero section, mission/vision, services, skills,
+ * activities, gallery, contact form and footer.
+ * @returns {JSX.Element} The rendered Home page
+ */
 export default function Home() {
   return (
     <>
       <DesktopNav />
       <MobileNav />
-      <main className="min-h-screen bg-[#0d1216] pt-20"> {/* Added pt-20 for navbar spacing */}
+      <main className="min-h-screen bg-[#0d1216] pt-20">
         <Hero />
         <div id="msvs"></div>
         <MissionVision />
