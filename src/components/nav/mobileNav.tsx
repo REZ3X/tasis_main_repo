@@ -104,6 +104,7 @@ export default function MobileNav() {
             {[
               { name: "Beranda", href: "/" },
               { name: "Anggota", href: "/member" },
+              { name: "Acara", href: "/comingSoon"},
               { name: "Pengaduan", href: "/comingSoon" },
               { name: "Tentang Kami", href: "/comingSoon" },
             ].map((link) => (
