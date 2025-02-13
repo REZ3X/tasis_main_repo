@@ -45,7 +45,7 @@ export default function EventsPage() {
         <>
             <DesktopNav />
             <MobileNav />
-            <main className="min-h-screen bg-[#0d1216]">
+            <main className="min-h-screen bg-[#0d1216] overflow-x-hidden">
                 <section className="relative px-6 py-8 mt-12 bg-[#0d1216]">
                     <div className="absolute inset-0 z-0">
                         <div className="absolute inset-0 opacity-10">
