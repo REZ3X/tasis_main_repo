@@ -136,7 +136,7 @@ export default function MailForm() {
         </form>
         <div className="text-center mt-4">
           <Link 
-            href="/comingSoon"
+            href="/reporting"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#ebae3a] text-[#0d1216] 
               rounded-lg font-semibold text-lg hover:bg-[#efbb4a] 
               transition-all duration-300 transform hover:scale-105

@@ -4,27 +4,25 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useActiveRoute } from '@/hooks/useActiveRoute';
 
-/**
- * MobileNav Component
- * Renders a responsive mobile navigation menu with slide-out functionality.
- * Features:
- * - Responsive mobile-first design (hidden on desktop)
- * - Slide-out side navigation
- * - Click outside to close
- * - Body scroll lock when menu is open
- * - Animated transitions
- */
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const sideNavRef = useRef<HTMLDivElement>(null);
+  const isActive = useActiveRoute();
+
+  const links = [
+    { name: "Beranda", href: "/" },
+    { name: "Anggota", href: "/member" },
+    { name: "Acara", href: "/events"},
+    { name: "Pengaduan", href: "/reporting" },
+    { name: "Tentang Kami", href: "/comingSoon" },
+    { name: "Tata Tertib", href: "/comingSoon"},
+  ];
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        sideNavRef.current &&
-        !sideNavRef.current.contains(event.target as Node)
-      ) {
+      if (sideNavRef.current && !sideNavRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     }
@@ -102,19 +100,15 @@ export default function MobileNav() {
 
         <div className="pt-16 px-6">
           <nav className="space-y-4">
-            {[
-              { name: "Beranda", href: "/" },
-              { name: "Anggota", href: "/member" },
-              { name: "Acara", href: "/events"},
-              { name: "Pengaduan", href: "/comingSoon" },
-              { name: "Tentang Kami", href: "/comingSoon" },
-              { name: "Tata Tertib", href: "/comingSoon"},
-            ].map((link) => (
+            {links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="block py-2 text-gray-300 hover:text-[#ebae3a] 
-                  transition-colors duration-300"
+                className={`block py-2 transition-colors duration-300
+                  ${isActive(link.href)
+                    ? 'text-[#ebae3a]'
+                    : 'text-gray-300 hover:text-[#ebae3a]'
+                  }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

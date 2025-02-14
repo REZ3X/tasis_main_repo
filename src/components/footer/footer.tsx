@@ -74,7 +74,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { name: "Acara", href: "/events" },
-                { name: "Pengaduan", href: "/comingSoon" },
+                { name: "Pengaduan", href: "/reporting" },
                 { name: "Tata Tertib", href: "/comingSoon" },
                 { name: "Pengembang", href: "https://rejaka.me"}
               ].map((item) => (

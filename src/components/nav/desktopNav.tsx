@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useActiveRoute } from '@/hooks/useActiveRoute';
 
 /**
  * DesktopNav Component
@@ -8,6 +11,17 @@ import Image from 'next/image';
  * Contains organization branding and main navigation menu
  */
 export default function DesktopNav() {
+  const isActive = useActiveRoute();
+
+  const links = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Anggota', href: '/member' },
+    { name: "Acara", href: "/events"},
+    { name: 'Pengaduan', href: '/reporting' },
+    { name: 'Tentang Kami', href: '/comingSoon' },
+    { name: "Tata Tertib", href: "/comingSoon"},
+  ];
+
   return (
     <nav className="mobile:hidden laptop:fixed top-0 left-0 right-0 z-50 bg-[#0d1216] border-b border-[#594925]/20">
       <div className="max-w-7xl mx-auto px-6">
@@ -36,24 +50,24 @@ export default function DesktopNav() {
           </Link>
 
           <div className="flex items-center gap-8">
-            {[
-              { name: 'Beranda', href: '/' },
-              { name: 'Anggota', href: '/member' },
-              { name: "Acara", href: "/events"},
-              { name: 'Pengaduan', href: '/comingSoon' },
-              { name: 'Tentang Kami', href: '/comingSoon' },
-              { name: "Tata Tertib", href: "/comingSoon"},
-            ].map((link) => (
+            {links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[#594925] hover:text-[#ebae3a] transition-colors duration-300
-                  relative group py-2"
+                className={`relative group py-2 transition-colors duration-300
+                  ${isActive(link.href) 
+                    ? 'text-[#ebae3a]' 
+                    : 'text-[#594925] hover:text-[#ebae3a]'
+                  }`}
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#ebae3a] transform scale-x-0 
-                  group-hover:scale-x-100 transition-transform duration-300">
-                </span>
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#ebae3a] transform 
+                  transition-transform duration-300
+                  ${isActive(link.href) 
+                    ? 'scale-x-100' 
+                    : 'scale-x-0 group-hover:scale-x-100'
+                  }`}
+                />
               </Link>
             ))}
           </div>
