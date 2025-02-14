@@ -134,10 +134,11 @@ export default function Footer() {
               Ikuti Kami
             </h3>
             <div className="flex gap-4">
-              {[{ icon: <FaInstagram />, href: "#" }].map((social, index) => (
+              {[{ icon: <FaInstagram />, href: "https://www.instagram.com/tasisstembayo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" }].map((social, index) => (
                 <Link
                   key={index}
                   href={social.href}
+                  target="_blank"
                   className="relative w-10 h-10 rounded-full bg-[#1f1c16] flex items-center justify-center
                       text-[#ebae3a] hover:bg-[#ebae3a] hover:text-[#0d1216] transition-all duration-300
                       border border-[#ebae3a]/20 hover:border-[#ebae3a] z-10"

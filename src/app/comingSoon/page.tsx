@@ -1,4 +1,6 @@
-import Link from 'next/link';
+'use client'
+
+import { useRouter } from 'next/navigation';
 import { FaArrowLeft, FaClock } from 'react-icons/fa';
 
 /**
@@ -8,9 +10,11 @@ import { FaArrowLeft, FaClock } from 'react-icons/fa';
  * - Blurred background effects
  * - Clock icon
  * - Responsive text
- * - Back to home button
+ * - Back to previous page button
  */
 export default function ComingSoon() {
+  const router = useRouter();
+
   return (
     <main className="min-h-screen bg-[#0d1216] flex flex-col items-center justify-center px-6 relative">
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -32,15 +36,15 @@ export default function ComingSoon() {
           </p>
         </div>
 
-        <Link
-          href="/"
+        <button
+          onClick={() => router.back()}
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#231918] text-[#ebae3a] 
             rounded-lg hover:bg-[#1f1c16] border border-[#ebae3a]/20 hover:border-[#ebae3a]
             transition-all duration-300 mt-8 relative"
         >
           <FaArrowLeft className="w-4 h-4" />
-          <span>Kembali ke Beranda</span>
-        </Link>
+          <span>Kembali</span>
+        </button>
       </div>
     </main>
   );
