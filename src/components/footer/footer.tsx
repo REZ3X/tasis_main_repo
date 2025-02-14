@@ -160,13 +160,13 @@ export default function Footer() {
             </p>
             <div className="flex gap-6">
               <Link
-                href="#"
+                href="/comingSoon"
                 className="text-gray-400 hover:text-[#ebae3a] text-sm transition-colors duration-300"
               >
                 Kebijakan Privasi
               </Link>
               <Link
-                href="#"
+                href="/comingSoon"
                 className="text-gray-400 hover:text-[#ebae3a] text-sm transition-colors duration-300"
               >
                 Syarat & Ketentuan
