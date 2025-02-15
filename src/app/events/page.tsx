@@ -8,6 +8,7 @@ import EventList from "@/components/events/eventList";
 import Footer from "@/components/footer/footer";
 import ButtonToUp from "@/components/feature/buttonToUp";
 import PostersList from "@/components/gallery/postersList";
+import PublicNote from '@/components/events/publicNote';
 
 /**
  * EventsPage Component
@@ -22,12 +23,10 @@ export default function EventsPage() {
         { id: 'acara', label: 'Acara' },
         { id: 'aktivitas', label: 'Aktivitas' },
         { id: 'pamflet', label: 'Pamflet' },
+        { id: 'catatan', label: 'Catatan Publik' }, // Add this
     ];
-
-    /**
-     * Renders the appropriate content based on the active tab
-     * @returns JSX.Element corresponding to the selected tab
-     */
+    
+    // And update the renderContent function:
     const renderContent = () => {
         switch (activeTab) {
             case 'acara':
@@ -36,11 +35,12 @@ export default function EventsPage() {
                 return <Activity />;
             case 'pamflet':
                 return <PostersList />;
+            case 'catatan':
+                return <PublicNote />;
             default:
                 return <EventList />;
         }
     };
-
     return (
         <>
             <DesktopNav />
