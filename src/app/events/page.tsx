@@ -9,6 +9,7 @@ import Footer from "@/components/footer/footer";
 import ButtonToUp from "@/components/feature/buttonToUp";
 import PostersList from "@/components/gallery/postersList";
 import PublicNote from '@/components/events/publicNote';
+import BlogTasis from '@/components/events/blogTasis';
 
 /**
  * EventsPage Component
@@ -23,10 +24,10 @@ export default function EventsPage() {
         { id: 'acara', label: 'Acara' },
         { id: 'aktivitas', label: 'Aktivitas' },
         { id: 'pamflet', label: 'Pamflet' },
-        { id: 'catatan', label: 'Catatan Publik' }, // Add this
+        { id: 'catatan', label: 'Catatan Publik' },
+        { id: 'blog', label: 'Blog' }, // Add blog tab
     ];
     
-    // And update the renderContent function:
     const renderContent = () => {
         switch (activeTab) {
             case 'acara':
@@ -37,10 +38,13 @@ export default function EventsPage() {
                 return <PostersList />;
             case 'catatan':
                 return <PublicNote />;
+            case 'blog':
+                return <BlogTasis />;
             default:
                 return <EventList />;
         }
     };
+    
     return (
         <>
             <DesktopNav />
