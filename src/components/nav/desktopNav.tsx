@@ -19,7 +19,7 @@ export default function DesktopNav() {
     { name: "Acara", href: "/events"},
     { name: 'Pengaduan', href: '/reporting' },
     { name: 'Tentang Kami', href: '/comingSoon' },
-    { name: "Tata Tertib", href: "/comingSoon"},
+    { name: "Tata Tertib", href: "/regulation"},
   ];
 
   return (

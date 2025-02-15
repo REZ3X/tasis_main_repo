@@ -75,7 +75,7 @@ export default function Footer() {
               {[
                 { name: "Acara", href: "/events" },
                 { name: "Pengaduan", href: "/reporting" },
-                { name: "Tata Tertib", href: "/comingSoon" },
+                { name: "Tata Tertib", href: "/regulation" },
                 { name: "Pengembang", href: "https://rejaka.me"}
               ].map((item) => (
                 <li key={item.name} className="relative">
