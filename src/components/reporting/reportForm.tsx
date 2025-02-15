@@ -2,8 +2,12 @@
 
 import { useState, useRef  } from 'react';
 
-export default function ReportForm() {
-const fileInputRef = useRef<HTMLInputElement>(null);
+interface ReportFormProps {
+  onSuccess?: () => void;
+}
+
+export default function ReportForm({ onSuccess }: ReportFormProps) {
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [formData, setFormData] = useState({
     title: '',
     incidentDatetime: '',
@@ -38,10 +42,11 @@ const fileInputRef = useRef<HTMLInputElement>(null);
         setMessage({ type: 'success', content: 'Laporan berhasil dikirim!' });
         setFormData({ title: '', incidentDatetime: '', details: '' });
         setEvidence(null);
-        // Reset file input
         if (fileInputRef.current) {
           fileInputRef.current.value = '';
         }
+        // Call the onSuccess callback to refresh total
+        onSuccess?.();
       } else {
         throw new Error(result.error);
       }

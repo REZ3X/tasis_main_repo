@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import DesktopNav from "@/components/nav/desktopNav";
 import MobileNav from "@/components/nav/mobileNav";
 import ReportForm from "@/components/reporting/reportForm";
@@ -10,6 +10,11 @@ import Footer from "@/components/footer/footer";
 
 export default function ReportingPage() {
   const [showForm, setShowForm] = useState(false);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+
+  const handleRefreshTotal = useCallback(() => {
+    setRefreshTrigger(prev => prev + 1);
+  }, []);
 
   return (
     <>
@@ -28,7 +33,7 @@ export default function ReportingPage() {
             </div>
 
             <div className="mb-8">
-              <TotalReport />
+              <TotalReport key={refreshTrigger} />
             </div>
 
             <div className="text-center mb-8">
@@ -45,7 +50,7 @@ export default function ReportingPage() {
 
             {showForm && (
               <div className="bg-[#0d1216] p-6 rounded-lg shadow-lg">
-                <ReportForm />
+                <ReportForm onSuccess={handleRefreshTotal} />
               </div>
             )}
           </div>
