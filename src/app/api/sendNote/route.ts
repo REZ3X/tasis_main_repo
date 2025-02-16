@@ -3,6 +3,14 @@ import { pool, ensureConnection } from '../db/db';
 import mysql from 'mysql2/promise';
 import { containsBannedWords, filterBadWords } from '@/utils/wordFilter';
 
+/**
+ * Handles POST requests to submit a new public note
+ * @param request - The incoming HTTP request containing note content and author
+ * @returns NextResponse with success status and data or error message
+ * 
+ * Request body: { content: string, author: string }
+ * Response: { success: boolean, data?: number, error?: string }
+ */
 export async function POST(request: Request) {
     try {
         const { content, author } = await request.json();

@@ -25,35 +25,29 @@ export default function RegulationPage() {
                 sekolah yang tertib
               </p>
             </div>
-
             <div className="bg-[#0d1216] p-6 rounded-lg shadow-lg border border-[#594925]/20">
               <h2 className="text-2xl font-bold text-[#ebae3a] mb-6">
                 Pelanggaran Kelakuan
               </h2>
               <BehaviorTable />
             </div>
-
             <div className="bg-[#0d1216] p-6 rounded-lg shadow-lg border border-[#594925]/20">
               <h2 className="text-2xl font-bold text-[#ebae3a] mb-6">
                 Pelanggaran Kerapian
               </h2>
               <NeatTable />
             </div>
-
             <div className="bg-[#0d1216] p-6 rounded-lg shadow-lg border border-[#594925]/20">
               <h2 className="text-2xl font-bold text-[#ebae3a] mb-6">
                 Pelanggaran Kerajinan
               </h2>
               <CraftingTable />
             </div>
-
             <div className="mt-8 p-8 bg-[#231918] rounded-lg">
               <h3 className="text-2xl font-bold text-[#ebae3a] mb-6 text-center">
                 Catatan Penting
               </h3>
-
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {/* Warning Card */}
                 <div className="p-4 bg-yellow-500/10 rounded-lg border border-yellow-500/20">
                   <div className="flex items-center gap-3 mb-3">
                     <svg
@@ -77,8 +71,6 @@ export default function RegulationPage() {
                     Akumulasi poin di bawah 36
                   </p>
                 </div>
-
-                {/* SP1 Card */}
                 <div className="p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
                   <div className="flex items-center gap-3 mb-3">
                     <svg
@@ -105,8 +97,6 @@ export default function RegulationPage() {
                     </span>
                   </p>
                 </div>
-
-                {/* SP2 Card */}
                 <div className="p-4 bg-orange-500/10 rounded-lg border border-orange-500/20">
                   <div className="flex items-center gap-3 mb-3">
                     <svg
@@ -133,8 +123,6 @@ export default function RegulationPage() {
                     </span>
                   </p>
                 </div>
-
-                {/* SP3 Card */}
                 <div className="p-4 bg-red-500/10 rounded-lg border border-red-500/20">
                   <div className="flex items-center gap-3 mb-3">
                     <svg

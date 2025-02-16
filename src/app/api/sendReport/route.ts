@@ -9,6 +9,14 @@ const imagekit = new ImageKit({
     urlEndpoint: process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT!,
 });
 
+/**
+ * Handles POST requests to submit incident reports.
+ * Processes form data including title, datetime, details, and evidence files.
+ * Uploads any attached evidence to ImageKit and stores report data in MySQL database.
+ * 
+ * @param request - The incoming request containing form data
+ * @returns JSON response with success status and either insertId or error details
+ */
 export async function POST(request: Request) {
     try {
         const formData = await request.formData();
@@ -17,7 +25,6 @@ export async function POST(request: Request) {
         const details = formData.get('details') as string;
         const evidence = formData.get('evidence') as File;
 
-        // Ensure database connection
         const isConnected = await ensureConnection();
         if (!isConnected) {
             return NextResponse.json(
@@ -66,9 +73,6 @@ export async function POST(request: Request) {
                 { status: 500 }
             );
         }
-
-
-        
 
     } catch (error: unknown) {
         console.error('Error submitting report:', error);

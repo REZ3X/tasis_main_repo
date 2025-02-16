@@ -2,6 +2,10 @@ import { NextResponse } from 'next/server';
 import { pool, ensureConnection } from '../db/db';
 import mysql from 'mysql2/promise';
 
+/**
+ * GET endpoint to fetch approved public notes
+ * @returns {Promise<NextResponse>} JSON response containing notes or error message
+ */
 export async function GET() {
     try {
         const isConnected = await ensureConnection();

@@ -2,9 +2,12 @@ import { NextResponse } from 'next/server';
 import { pool, ensureConnection } from '../db/db';
 import { RowDataPacket } from 'mysql2';
 
+/**
+ * GET endpoint to fetch the total count of reports from the database.
+ * @returns {Promise<NextResponse>} JSON response with total count or error message
+ */
 export async function GET() {
     try {
-        // Ensure database connection
         const isConnected = await ensureConnection();
         if (!isConnected) {
             return NextResponse.json(
@@ -12,7 +15,7 @@ export async function GET() {
                 { status: 503 }
             );
         }
-        // Get total count
+
         interface CountResult extends RowDataPacket {
             total: number;
         }
