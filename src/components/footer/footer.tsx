@@ -106,11 +106,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:tasisstembayo@gmail.com"
+                  href="mailto:tasis.stembayo.sch.id"
                   className="flex items-center gap-3 text-gray-300 hover:text-[#ebae3a] transition-colors duration-300 group"
                 >
                   <FaEnvelope className="text-[#ebae3a] group-hover:scale-110 transition-transform duration-300" />
-                  <span>tasisstembayo@gmail.com</span>
+                  <span>tasis.stembayo.sch.id</span>
                 </a>
               </li>
               <li>
